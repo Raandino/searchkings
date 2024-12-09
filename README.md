@@ -16,6 +16,7 @@ It leverages popular front-end tools and methodologies to ensure both a great us
 
 - **Responsive Design**: The project is optimized for all screen sizes, from mobile devices to large desktops. Bootstrap’s grid system and responsive classes, along with minimal custom media queries, ensure a seamless experience across devices.
 - **Theme Customization**: The ability to change themes on the fly by clicking the floating icon, showcasing the level of customization available. This feature allows for dynamic styling and personalization.
+  
 ![Cover Photo](https://github.com/Raandino/searchkings/blob/main/assets/img/githubgif.gif)
 
 - **Mobile & Tablet Responsiveness**: The design adapts perfectly to mobile phones, tablets, and laptops, ensuring excellent usability and readability.
@@ -31,10 +32,10 @@ You can check out the live version of this project by visiting the following lin
 
 To get started with this project on your local machine, clone the repository:
 
-\`\`\`bash
+```bash
 git clone https://github.com/your-username/project-name.git
 cd project-name
-\`\`\`
+```
 
 Then open the \`index.html\` file in your browser to see the project in action.
 
