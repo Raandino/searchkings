@@ -1,0 +1,728 @@
+/* ========================= */
+/* CSS RESET */
+/* ========================= */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+li{
+  list-style: none;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+/* ========================= */
+/* VARIABLES AND FONTS */
+/* ========================= */
+
+:root{
+  --primary: #0A6579;
+  --secondary: #F99E15;
+  --accent: #484848;
+  --neutral: #ffffff;
+  --neutral-2:#F5F5F5;
+  --neutral-3: #000000;
+  --hero-overlay-color:#00000093;
+}
+/* :root {
+  --primary: #2A9D8F;     
+  --secondary: #E76F51;   
+  --accent: #264653;      
+  --neutral: #FAFAFA;     
+  --neutral-2: #EDEDED;   
+  --neutral-3: #1E1E1E;  
+  --hero-overlay-color: #00000080; 
+}
+:root {
+  --primary: #D32F2F;       
+  --secondary: #5179e7;     
+  --accent: #616161;        
+  --neutral: #ffffff;       
+  --neutral-2: #F1F1F1;     
+  --neutral-3: #000000;   
+  --hero-overlay-color: #0b0e2a80;
+} */
+
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf') format('truetype-variations') ;
+}
+
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('fonts/Albert_Sans/AlbertSans-VariableFont_wght.ttf') format('truetype-variations');
+}
+
+/* ========================= */
+/* CTA BUTTONS */
+/* ========================= */
+
+
+.cta-button{
+  color: var(--neutral);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+.cta-button i{
+  border-radius: 100%;
+  border: 2px solid var(--neutral);
+  padding: 10px;
+  transition: all 300ms ease;
+  cursor: pointer;
+  color: var(--neutral);
+}
+
+.cta-button-title{ 
+  font-family: 'Albert Sans';
+  margin-bottom: 0;
+}
+
+.cta-button-subtitle{
+  font-family: 'Albert Sans';
+  margin-bottom: 0;
+}
+
+.cta-button__dark{
+  color: var(--neutral-3);
+}
+.cta-button__dark i{
+  border: 2px solid var(--neutral-3);
+  border-radius: 100%;
+  color: var(--neutral-3);
+  padding: 10px;
+}
+
+.cta-button:hover i{
+  border: 2px solid var(--primary);
+  background-color: var(--neutral);
+  border-radius: 100%;
+  color: var(--primary);
+  padding: 10px;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header section.nav-container{
+  background-color: var(--primary); 
+}
+header section .nav-link{
+  font-family: 'Albert Sans';
+  font-weight: bold;
+}
+header section .icon-logo.navbar-logo{
+  color: var(--neutral) ;
+  font-size: 70px;
+}
+.navbar-toggler{
+  border-color: var(--neutral);
+}
+.navbar-toggler:focus{
+
+  box-shadow: 0px 0px 2px 2px var(--neutral) !important;
+}
+
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+header div .icon-logo{
+  color: var(--primary) ;
+  font-size: 120px;
+}
+
+header .button-header{
+  font-family: 'Red Hat Display';
+  background-color: var(--secondary);
+  padding-inline: 12px;
+  padding-block: 9px;
+  color: var(--neutral-3);
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--secondary);
+  height: fit-content;
+  transition: all 100ms ease;
+  
+}
+header .button-header:hover{
+background-color: var(--secondary);
+
+}
+header .button-header:active{
+  transform: scale(1.1);
+  background-color: var(--secondary) !important;
+}
+header .shopping-cart{
+  position: relative;
+}
+header .shopping-cart::after{
+  content: '';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0pc;
+  background-color: var(--secondary);
+  border-radius: 100%;
+
+}
+
+/* ========================= */
+/* FLOATING ICON */
+/* ========================= */
+.floating-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.floating-icon i{
+  border-radius: 100%;
+  color: var(--neutral);
+  background-color: var(--secondary);
+  padding: 10px;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+.hero{
+  position: relative;
+  height: 65dvh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('/assets/img/hero-image.webp');
+}
+.hero::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--hero-overlay-color);
+}
+.hero .hero-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-subtitle{
+  color: var(--neutral);
+  text-align: center;
+  font-family: "Albert Sans";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.hero .hero-title{
+  color: var(--neutral);
+  text-align: center;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 800;
+ 
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+.hero .hero-list{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: fit-content;
+  align-self: center;
+  gap: 11px;
+}
+.hero .hero-list-item{
+  display: flex;
+  gap: 5px;
+}
+.hero .hero-list-item p{
+  color: var(--neutral);
+  font-family: "Albert Sans";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.hero .hero-list-item i{
+  color: var(--secondary);
+}
+
+.hero .hero-button{
+  background-color: var(--secondary);
+  font-weight: 700;
+  color: var(--neutral-3);
+  transition: all 100ms ease;
+}
+.hero .hero-button:active{
+  transform: scale(1.1);
+  background-color: var(--secondary);
+  font-weight: 700;
+  color: var(--neutral-3);
+}
+
+/* ========================= */
+/* SERVICES SECTION */
+/* ========================= */
+.services{
+  padding-top: 90px;
+  padding-bottom:75px;;
+}
+  .services h3{
+  color: var(--primary);
+  font-family: "Albert Sans";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.services h2{
+  color: var(--neutral-3);
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.services .services-description-info{
+  background-color: var(--neutral-2);
+  color: var(--neutral-3);
+  padding-block: 10px;
+  position: relative;
+}
+.services .services-description-info p{
+  max-width: 630px;
+
+}
+.services .services-description-info::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--neutral-2);
+  top: 0;
+  left: -100%;
+}
+.services .services-description-promo{
+  background-color: var(--primary);
+  color: var(--neutral);
+  padding-block: 10px;
+}
+.services .services-content{
+  padding-top: 63px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.services .services-content-service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-2);
+  border-radius: 10px;
+  grid-column: span 4;
+  grid-row: span 2;
+  padding: 40px;
+}
+.services .services-content-service i{
+  font-size: 90px;
+}
+.services .services-content-service h3{
+  padding-top: 15px;
+  color: var(--neutral-3);
+  text-align: center;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+}
+.services .services-content-service p{
+  color: var(--neutral-3);
+  text-align: center;
+  font-family: "Red Hat Display";
+
+  font-style: normal;
+  font-weight: 400;
+}
+.services .services-content-cta{
+  background-color: var(--neutral-2);
+  border-radius: 10px;
+  grid-column: span 4;
+  grid-row: span 1;
+  color: var(--neutral-3);
+  text-decoration: none;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.services .services-content-cta:hover{
+  transform: scale(1.05);
+}
+.services .services-content-cta:active{
+  transform: scale(1.05);
+}
+.services .services-content-cta i{
+  height: 100%;
+  background-color: var(--accent);
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+  color: var(--neutral);
+}
+.services .services-content-cta div{
+  padding: 20px;
+}
+.services .services-content-cta h5{
+  color: var(--neutral-3);
+  font-family: "Red Hat Display";
+  font-weight: 700;
+
+}
+.services .services-content-cta p{
+  color: var(--neutral-3);
+  font-family: "Red Hat Display";
+  font-weight: 400;
+
+}
+
+@media (max-width:576px) {
+  .services .services-content{
+    padding-top: 40px;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+  }
+  .services .services-content-service{
+    grid-column: span 12;
+    grid-row: span 2;
+  }
+  .services .services-content-cta{
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+
+}
+@media (min-width:576px) {
+  .services .services-content{
+    padding-top: 40px;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+  }
+  .services .services-content-service{
+    grid-column: span 12;
+    grid-row: span 2;
+  }
+  .services .services-content-cta{
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+
+
+}
+@media (min-width:992px) {
+  .services .services-content{
+    padding-top: 63px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+  }
+  .services .services-content-service{
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  .services .services-content-cta{
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+
+}
+
+/* ========================= */
+/* INFO SECTION */
+/* ========================= */
+.info {
+  display: flex;
+  background-color: var(--neutral-2);
+  overflow: hidden;
+  max-height: 700px;
+  height: auto; 
+  margin: 0;
+}
+
+.info .info-image {
+  background-image: url('/assets/img/image-text.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.info .info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--neutral-3);
+  padding: 87px;
+  max-width: 680px;
+}
+
+.info .info-content a {
+  width: fit-content;
+}
+@media (max-width:576px) {
+  .info .info-content{
+    padding: 20px;
+  }
+}
+@media (min-width:576px) {
+  .info .info-content{
+    padding: 40px;
+
+  }
+}
+@media (min-width:992px) {
+  .info .info-content{
+    padding: 80px;
+  }
+}
+.info .info-content h2{
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.info .info-content p{
+  font-family: "Albert Sans";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.info .info-content a{
+  color: var(--neutral-3);
+  font-family: "Albert Sans";
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  
+}
+.info .info-content a::before{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  border-radius: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--neutral-3);
+  transition: all 300ms ease;
+}
+.info .info-content a:hover::before{
+  width: 100%;
+}
+
+/* ========================= */
+/* PARTNERS SECTION */
+/* ========================= */
+.partners{
+  padding-block: 61px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 43px;
+  justify-content: center;;
+}
+.partners .partners-image{  
+  width: 200px;
+  object-fit: contain;
+  height: 90px;
+}
+
+/* ========================= */
+/* BRANCH BUTTONS */
+/* ========================= */
+
+.branch-locator{
+  padding-block:46px ;
+}
+.branch-locator h2{
+  color: var(--neutral-3);
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.branch-locator .branch-locator-items{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+}
+.branch-locator .branch-locator-items p{
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--neutral-2);
+  color: var(--primary);
+  text-align: center;
+  font-family: "Albert Sans";
+  font-style: normal;
+  font-weight: 700;
+  padding: 35px;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+.branch-locator .branch-locator-items p:hover{
+  background-color: var(--primary);
+  color: var(--neutral-2);
+}
+.branch-locator .branch-locator-items p.active{
+  background-color: var(--primary);
+  color: var(--neutral);
+}
+.branch-locator .branch-locator-map{
+ height: 400px;
+
+}
+.branch-locator .branch-locator-map iframe{
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+/* ========================= */
+/* FOOTER BUTTONS */
+/* ========================= */
+
+footer.footer .footer-nav-container{
+  background-color: var(--primary); 
+  color: var(--neutral);
+}
+footer.footer .footer-nav-container i.icon-logo{
+  font-size: 120px;
+}
+footer.footer .footer-copyright{
+  background-color: var(--neutral-3);
+  color: var(--neutral) ;
+  font-family: 'Albert Sans';
+  font-weight: bold;
+  padding: 20px;
+  margin: 0;
+}
+footer.footer .footer-copyright a{
+  padding-inline: 10px;
+  text-decoration: underline;
+  font-weight: 400;
+  color: var(--neutral);
+}
+
+/* ========================= */
+/* Thanks Guys -Rodolfo Andino. */
+/* ========================= */
+
+
+.floating-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.floating-icon i {
+  border-radius: 100%;
+  color: var(--neutral);
+  background-color: var(--secondary);
+  padding: 10px;
+}
+
+.theme-menu {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10000;
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.theme-option {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-option:last-child {
+  border-bottom: none;
+}
+
+.theme-option:hover {
+  background-color: #f0f0f0;
+}
+
+

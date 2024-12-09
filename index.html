@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>SearchKings Web Developer Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/styles.css" />
+        <link rel="stylesheet" href="assets/fonts/icons_font/style.css" />
+        <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    </head>
+    <body>
+        <header>
+            <section class="container">
+                <div class="row align-items-center">
+                    <i class="d-none d-lg-inline icon-logo col"></i>
+                    <section class="col py-2 row-gap-3 col-lg-6 row justify-content-center justify-content-md-start justify-content-lg-end">
+                        <a
+                            class="d-none d-md-flex col-auto cta-button cta-button__dark"
+                            href="https://www.google.com/maps/place/SearchKings/@43.8096657,-79.3374774,17z/data=!4m6!3m5!1s0x89d4d373b2a1e6c9:0x8e5854394a5bce26!8m2!3d43.8106101!4d-79.3378358!16s%2Fg%2F12hwkl4bs?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank"
+                        >
+                            <i class="material-icons" style="font-size: 24px;">pin_drop</i>
+                            <div>
+                                <p class="cta-button-title h5">Location</p>
+                                <p class="cta-button-subtitle h5">Subline</p>
+                            </div>
+                        </a>
+                        <a class="col-auto cta-button cta-button__dark" href="tel:+5555555555" target="_blank">
+                            <i class="material-icons" style="font-size: 24px;">call</i>
+                            <div>
+                                <p class="cta-button-title h5">Call Us Now</p>
+                                <p class="cta-button-subtitle h4">555-555-5555</p>
+                            </div>
+                        </a>
+                    </section>
+                    <button class="d-none d-xl-inline col-auto button-header btn">
+                        24/7 emergency service
+                    </button>
+                </div>
+            </section>
+            <section class="nav-container">
+                <nav class="navbar navbar-expand-lg container">
+                    <div class="container-fluid">
+                        <i class="navbar-logo d-lg-none icon-logo col-full col-lg-auto text-start text-md-center"></i>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 row justify-content-between w-100">
+                                <li class="d-fl text-center col nav-item dropdown">
+                                    <a class="nav-link text-light dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Shop Now
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="text-center col nav-item dropdown">
+                                    <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        HVAC Repairs
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="text-center col nav-item">
+                                    <a class="nav-link text-light active" aria-current="page" href="#">Installations</a>
+                                </li>
+                                <li class="text-center col nav-item">
+                                    <a class="nav-link text-light" href="#">Promotions</a>
+                                </li>
+                                <li class="text-center col nav-item dropdown">
+                                    <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        About Us
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Dropdown Item 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="text-center col nav-item">
+                                    <a class="nav-link text-light active" aria-current="page" href="#">Contact Us</a>
+                                </li>
+                                <li class="text-center col col-lg-1 nav-item">
+                                    <a class="nav-link text-light active" aria-current="page" href="#">
+                                        <i class="material-icons shopping-cart" style="font-size: 24px;">
+                                          shopping_cart
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+        </header>
+
+        <!-- Floating Button  -->
+        <section class="floating-icon">
+            <i class="material-icons" style="font-size: 30px;">chat</i>
+        </section>
+        <div id="themeMenu" class="theme-menu">
+          <div class="theme-option" id="theme-default">Default Theme</div>
+
+          <div class="theme-option" id="theme-coral">Coral Theme</div>
+          <div class="theme-option" id="theme-green">Green Theme</div>
+          <div class="theme-option" id="theme-red">Red Theme</div>
+          <div class="theme-option" id="theme-brown">Brown Theme</div>
+      </div>
+
+        <!-- Hero Section -->
+        <section class="hero text-white py-5">
+            <div class="container h-100 z-1 position-relative">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 hero-container">
+                        <p class="hero-subtitle h3">Locally owned and operated since 1992</p>
+                        <h1 class="hero-title col-10 col-xl-6 display-4">
+                            Heating & Cooling Experts
+                        </h1>
+                        <ul class="hero-list">
+                            <li class="hero-list-item">
+                                <i class="material-icons" style="font-size: 30px;">check</i>
+                                <p class="m-0 h5">
+                                    Qualified, experienced technicians
+                                </p>
+                            </li>
+                            <li class="hero-list-item">
+                                <i class="material-icons" style="font-size: 30px;">check</i>
+                                <p class="m-0 h5">
+                                    Licensed and insured
+                                </p>
+                            </li>
+                            <li class="hero-list-item">
+                                <i class="material-icons" style="font-size: 30px;">check</i>
+                                <p class="m-0 h5">
+                                    Experts in HVAC and ductwork
+                                </p>
+                            </li>
+                            <li class="hero-list-item">
+                                <i class="material-icons" style="font-size: 30px;">check</i>
+                                <p class="m-0 h5">
+                                    Money back guarantee
+                                </p>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn hero-button col-12 col-md-5 col-xl-4">Connect with a Specialist</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="services container">
+            <h3 class="h1">In Need of a Repair?</h3>
+            <h2 class="display-4">services & Solutions</h2>
+            <article class="services-description row">
+                <div class="services-description-info col-12 col-lg-8">
+                    <p>
+                        If you are facing a breakdown, need an emergency repair, or unsure if your systems are operating efficiently, we are available 24/7 to answer your questions and get you back to comfort.
+                    </p>
+                </div>
+                <div class="services-description-promo col-12 col-lg-4">
+                    <h4>[Current Month] Repair Promotion:</h4>
+                    <p>20% discount on repairs for veterans, first responders and their families*</p>
+                    <small>*Conditions </small>
+                </div>
+            </article>
+
+            <div class="services-content">
+                <article class="services-content-service">
+                    <i class="icon-ductless"></i>
+                    <h3 class="h2">Ductless</h3>
+                    <p class="h4">Repair & Service</p>
+                </article>
+                <article class="services-content-service">
+                    <i class="icon-maintenance"></i>
+                    <h3 class="h2">Maintenance</h3>
+                    <p class="h4">Preventative Solutions</p>
+                </article>
+                <a class="services-content-cta">
+                    <i class="material-icons" style="font-size: 30px;">mail</i>
+                    <div>
+                        <h5>Send us a Message</h5>
+                        <p class="h5">Unsure what you require or what system you have?</p>
+                    </div>
+                </a>
+                <a class="services-content-cta">
+                    <i class="material-icons" style="font-size: 30px;">call</i>
+                    <div>
+                        <h5>Call our Experts</h5>
+                        <p class="h4">555-555-5555</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!--  Info Section -->
+        <section class="info row">
+            <div class="info-image col-12 col-md-6"></div>
+            <article class="info-content col-12 col-md-6">
+                <h2 class="display-6">
+                    Your Local Heating & Cooling Specialist
+                </h2>
+                <p class="h5">
+                    We provide customer experience that goes beyond the ordinary and expected.
+                </p>
+                <p class="h5">
+                    Our trained and certified technicians are trained to solve any heating or cooling need and stand behind our work with a 100% satisfaction guarantee.
+                </p>
+                <a class="h5" href="/">
+                    Learn more about us
+                </a>
+            </article>
+        </section>
+
+        <!-- Branch Locator Section -->
+        <section class="branch-locator container">
+            <h2 class="display-4">Branch Locator</h2>
+            <div class="row">
+                <div class="col-12 col-md-4 branch-locator-items">
+                    <p class="active h6">4051 Gordon Baker Rd. Scarborough, ON M1W 2P3</p>
+                    <p class="h6">52 Corlett Drive, Ground Floor, Illovo, Sandton, 2196, South Africa</p>
+                </div>
+                <div class="col-12 col-md-8 branch-locator-map">
+                    <iframe
+                        id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.1807504322505!2d-79.34041072322796!3d43.81061007109505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d373b2a1e6c9%3A0x8e5854394a5bce26!2sSearchKings!5e0!3m2!1sen!2sca!4v1726233530989!5m2!1sen!2sca"
+                        height="100%"
+                        width="100%"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners container">
+            <img src="/assets/img/partners/partner1.webp" class="partners-image" alt="partner logo" />
+            <img src="/assets/img/partners/partner2.webp" class="partners-image" alt="partner logo" />
+            <img src="/assets/img/partners/partner3.webp" class="partners-image" alt="partner logo" />
+            <img src="/assets/img/partners/partner4.webp" class="partners-image" alt="partner logo" />
+        </section>
+
+        <!-- Footer  -->
+        <footer class="footer">
+            <section class="footer-nav-container">
+                <nav class="container py-3">
+                    <div class="row justify-content-between">
+                        <i class="icon-logo col-full col-lg-auto text-start text-md-center"></i>
+                        <div class="col-full row-gap-3 col-lg-6 row justify-content-start justify-content-md-center justify-content-lg-end">
+                            <a
+                                class="col-auto cta-button"
+                                href="https://www.google.com/maps/place/SearchKings/@43.8096657,-79.3374774,17z/data=!4m6!3m5!1s0x89d4d373b2a1e6c9:0x8e5854394a5bce26!8m2!3d43.8106101!4d-79.3378358!16s%2Fg%2F12hwkl4bs?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"
+                            >
+                                <i class="material-icons" style="font-size: 24px;">pin_drop</i>
+                                <div>
+                                    <p class="cta-button-title h5">Location</p>
+                                    <p class="cta-button-subtitle h5">Subline</p>
+                                </div>
+                            </a>
+                            <a class="col-auto cta-button" href="tel:+5555555555" target="_blank">
+                                <i class="material-icons" style="font-size: 24px;">call</i>
+                                <div>
+                                    <p class="cta-button-title h5">Call Us Now</p>
+                                    <p class="cta-button-subtitle h4">555-555-5555</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+            <p class="fs-6 text-center w-full footer-copyright">Copyright &#xA9; 2024 Rodolfo Solutions. All Rights Reserved. <a href="#"> Privacy Policy</a></p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="/assets/scripts/script.js"></script>
+    </body>
+</html>
