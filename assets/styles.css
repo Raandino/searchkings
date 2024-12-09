@@ -690,6 +690,7 @@ footer.footer .footer-copyright a{
 
 .floating-icon i {
   border-radius: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
   color: var(--neutral);
   background-color: var(--secondary);
   padding: 10px;
