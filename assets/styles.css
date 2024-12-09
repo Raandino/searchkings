@@ -240,7 +240,7 @@ header .shopping-cart::after{
 /* ========================= */
 .hero{
   position: relative;
-  height: 65dvh;
+  height: 65vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
